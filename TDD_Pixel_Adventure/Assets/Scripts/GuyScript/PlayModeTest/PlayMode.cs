@@ -21,11 +21,9 @@ public class GuyTest
     {   
         yield return new WaitForSeconds(2);
         Guy = GameObject.Find("Guy");
-        Ground = GameObject.Find("Ground");
        
 
-
-        Assert.That(Guy.transform.position.y > Ground.transform.position.y);
+        Assert.That(Guy.GetComponent<TouchAnyThink>().touch);
        
     }
 
